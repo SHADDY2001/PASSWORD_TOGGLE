@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PASSWORD_TOGGLE_HIDE</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+</head>
+<body>
+
+	<div class="head">
+		 	<h1><i>HELLO!</i></h1>
+		 </div>
+
+	<div class="wrapper">
+		<input type="password"
+		 placeholder="password"
+		 id="password">
+
+		 
+
+		 <span>
+		 	
+		 	<i class="fa-solid fa-eye"
+		 	<img class="pic" src="eye-scanner.png" 
+		 	aria-hidden="true"	
+		 	id="eye" onclick="toggle()"></i>
+
+		 </span>
+
+	</div>
+
+	<script>
+		var state = false
+		function toggle(){
+			if(state){
+				document.getElementById('password').setAttribute("type","password")
+				document.getElementById("eye").style.color="#7a797e"
+				state = false;
+				
+			}else{
+				document.getElementById("password").setAttribute("type","text");
+				document.getElementById("eye").style.color="#5887ef"
+				state = true;
+
+			}	
+		}
+	</script>
+
+</body>
+</html>
